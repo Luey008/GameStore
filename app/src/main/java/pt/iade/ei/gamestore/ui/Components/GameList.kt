@@ -31,7 +31,7 @@ fun GameListItem(
         modifier = Modifier
             .fillMaxWidth()
             .height(300.dp)
-            .padding(horizontal = 16.dp, vertical = 8.dp)
+            .padding(vertical = 8.dp)
             .shadow(
                 elevation = 8.dp,
             )
@@ -49,7 +49,7 @@ fun GameListItem(
             Column(
                 modifier = Modifier
                     .align(Alignment.BottomStart)
-                    .padding(8.dp)
+                    .padding(7.dp)
                     .background(
                         color = Color.Black.copy(alpha = 0.6f),
                     )

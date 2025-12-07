@@ -9,20 +9,30 @@ class GameDetailController {
         if (gameId == 1) {
             list.add(
                 GameDetailItem(
-                    itemName = "test",
-                    itemDesc = "test",
-                    itemPrice = 79.99,
-                    itemImg = R.drawable.dungeonsanddragonslogo,
+                    itemName = "Knowledge of the Gods (Nathan)",
+                    itemDesc = "With the knowledge of the Gods (Nathan) you shall be able to fix, create or tinker with anything that could be considered technological",
+                    itemPrice = 99.99,
+                    itemImg = R.drawable.knowledge,
                     id = 1
                 )
             )
 
             list.add(
                 GameDetailItem(
-                    itemName = "test",
-                    itemDesc = "test",
-                    itemPrice = 1.99,
-                    itemImg = R.drawable.dungeonsanddragonslogo,
+                    itemName = "Help from the Gods (Nathan)",
+                    itemDesc = "With help from the Gods (Nathan) anything that you possess that holds an eletrical pulse shall be fixed and perform 20% better than original",
+                    itemPrice = 67.67,
+                    itemImg = R.drawable.help,
+                    id = 2
+                )
+            )
+
+            list.add(
+                GameDetailItem(
+                    itemName = "The tool keeper (Bernardo)",
+                    itemDesc = "Simply use this item and ask Bernardo the tool keeper, for any tool, he then moves to the room in the back and shall bring anything you wish for",
+                    itemPrice = 57.83,
+                    itemImg = R.drawable.tool_keeper,
                     id = 2
                 )
             )

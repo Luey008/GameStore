@@ -15,6 +15,7 @@ import androidx.compose.material3.TopAppBarDefaults.topAppBarColors
 import androidx.compose.runtime.*
 import androidx.compose.ui.*
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontFamily
@@ -90,11 +91,11 @@ fun MainView(
                 contentColor = MaterialTheme.colorScheme.primary,
             ) {
                 NavigationBar {
-                    var yas = ""
+                    var selected by remember { mutableStateOf("") }
                     NavigationBarItem(
-                        selected = false,
+                        selected = selected == "featured",
                         onClick = {
-                            yas = "featured"
+                            selected = "featured"
                         },
                         icon = {
                             Icon(
@@ -106,9 +107,9 @@ fun MainView(
                     )
 
                     NavigationBarItem(
-                        selected = false,
+                        selected = selected == "history",
                         onClick = {
-                            yas = "history"
+                            selected = "history"
                         },
                         icon = {
                             Icon(
@@ -120,9 +121,9 @@ fun MainView(
                     )
 
                     NavigationBarItem(
-                        selected = false,
+                        selected = selected == "profile",
                         onClick = {
-                            yas = "profile"
+                            selected = "profile"
                         },
                         icon = {
                             Icon(
@@ -141,12 +142,17 @@ fun MainView(
             modifier = Modifier
                 .padding(innerPadding)
         ) {
-            Text(
-                fontFamily = FontFamily.Monospace,
-                fontSize = 30.sp,
-                fontWeight = FontWeight.Bold,
-                text = "Lueys Game Store"
-            )
+            Row(
+                modifier = Modifier
+                    .padding(horizontal = 12.dp)
+            ) {
+                Text(
+                    fontFamily = FontFamily.Monospace,
+                    fontSize = 30.sp,
+                    fontWeight = FontWeight.Bold,
+                    text = "Lueys Game Store"
+                )
+            }
             for (game in gamesList) {
                 GameListItem(item = game) {
                     val intent = Intent(context, GameDetailActivity::class.java)

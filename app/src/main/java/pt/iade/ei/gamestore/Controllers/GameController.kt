@@ -9,9 +9,9 @@ class GameController {
 
         list.add(
             GameItem(
-                gameName = "test",
-                gameDesc = "test",
-                gameImg = R.drawable.dungeonsanddragonslogo,
+                gameName = "TechClub",
+                gameDesc = "TechClub : A group by students for students, where you can indulge in your hobbies and enjoy learning with your peers",
+                gameImg = R.drawable.techclub_logo,
                 id = 1
             )
         )
