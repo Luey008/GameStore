@@ -2,20 +2,26 @@ package pt.iade.ei.gamestore.Views
 
 import android.content.Intent
 import android.os.Bundle
+import android.preference.PreferenceActivity
 import androidx.activity.compose.*
 import androidx.activity.*
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.*
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.material.icons.*
 import androidx.compose.material.icons.filled.*
 import androidx.compose.material3.*
 import androidx.compose.material3.TopAppBarDefaults.topAppBarColors
 import androidx.compose.runtime.*
 import androidx.compose.ui.*
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import pt.iade.ei.gamestore.ui.theme.GameStoreTheme
 import pt.iade.ei.gamestore.R
 import pt.iade.ei.gamestore.Controllers.GameController
@@ -57,13 +63,9 @@ fun MainView(
                 title = {
                     Row(
                         modifier = Modifier.fillMaxWidth(),
-                        horizontalArrangement = Arrangement.SpaceBetween,
+                        horizontalArrangement = Arrangement.End,
                         verticalAlignment = Alignment.CenterVertically
                     ) {
-                        Text(
-                            fontFamily = FontFamily.Monospace,
-                            text = "Lueys Game Store")
-
 
                         Row {
                             IconButton(onClick = {}) {
@@ -139,6 +141,12 @@ fun MainView(
             modifier = Modifier
                 .padding(innerPadding)
         ) {
+            Text(
+                fontFamily = FontFamily.Monospace,
+                fontSize = 30.sp,
+                fontWeight = FontWeight.Bold,
+                text = "Lueys Game Store"
+            )
             for (game in gamesList) {
                 GameListItem(item = game) {
                     val intent = Intent(context, GameDetailActivity::class.java)

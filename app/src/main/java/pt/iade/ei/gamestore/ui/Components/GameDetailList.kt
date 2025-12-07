@@ -2,11 +2,13 @@ package pt.iade.ei.gamestore.ui.Components
 
 import androidx.annotation.DrawableRes
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
@@ -59,10 +61,13 @@ fun GameDetailListItem(
                     text = "$itemname",
                     fontWeight = FontWeight.ExtraBold,
                     fontFamily = FontFamily.Monospace,
-                    fontSize = 16.sp
+                    fontSize = 16.sp,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis
                 )
 
-                Text("$itemdesc",
+                Text(
+                    text = "$itemdesc",
                     color = Color.Gray,
                     maxLines = 2,
                     overflow = TextOverflow.Ellipsis,
@@ -70,7 +75,13 @@ fun GameDetailListItem(
                 )
             }
 
-            Column {
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth(),
+                horizontalArrangement = Arrangement.End,
+                verticalAlignment = Alignment.CenterVertically
+
+            ) {
                 Text(
                     text = "${itemprice}€",
                 )
