@@ -2,18 +2,15 @@ package pt.iade.ei.gamestore.Views
 
 import android.content.Intent
 import android.os.Bundle
-import android.preference.PreferenceActivity
 import androidx.activity.compose.*
 import androidx.activity.*
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.material.icons.*
 import androidx.compose.material.icons.filled.*
 import androidx.compose.material3.*
 import androidx.compose.material3.TopAppBarDefaults.topAppBarColors
 import androidx.compose.runtime.*
-import androidx.compose.ui.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
