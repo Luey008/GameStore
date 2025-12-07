@@ -37,6 +37,39 @@ class GameDetailController {
                 )
             )
         }
+
+        if (gameId == 2) {
+            list.add(
+                GameDetailItem(
+                    itemName = "Cheese",
+                    itemDesc = "Cheese",
+                    itemPrice = 999999.999999,
+                    itemImg = R.drawable.cheese,
+                    id = 1
+                )
+            )
+
+            list.add(
+                GameDetailItem(
+                    itemName = "Cheese",
+                    itemDesc = "Cheese",
+                    itemPrice = 999999.999999,
+                    itemImg = R.drawable.cheese,
+                    id = 1
+                )
+            )
+
+            list.add(
+                GameDetailItem(
+                    itemName = "Cheese",
+                    itemDesc = "Cheese",
+                    itemPrice = 999999.999999,
+                    itemImg = R.drawable.cheese,
+                    id = 1
+                )
+            )
+        }
+
         onResult(list)
     }
 }

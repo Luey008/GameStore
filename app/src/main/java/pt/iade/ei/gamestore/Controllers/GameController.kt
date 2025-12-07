@@ -15,6 +15,16 @@ class GameController {
                 id = 1
             )
         )
+
+        list.add(
+            GameItem(
+                gameName = "RatClub",
+                gameDesc = "RatClub : A group by rats for rats, where you can indulge in your rat hobbies and enjoy learning with your rat peers",
+                gameImg = R.drawable.rat_fight,
+                id = 2
+            )
+        )
+
         onResult(list)
     }
 }
